@@ -33,6 +33,14 @@ h3 {
   font-size:13px;
 }
 
+details, summary {
+  display:block;
+}
+
+img {
+  border:none;
+}
+
 ul {
   list-style:none;
   padding:0 0 0 10px;
@@ -171,7 +179,7 @@ strong {
   width:808px;
   float:left;
   padding-left:150px;
-  padding-bottom:30px;
+  padding-bottom:10px;
   border-left:1px solid #888;
   border-right:1px solid #888;
   border-bottom:1px solid #888;
