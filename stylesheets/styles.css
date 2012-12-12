@@ -1,19 +1,17 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
-
 body {
-  padding:50px;
-  font:14px/1.5 Arial, sans-serif;
-  color:#777;
-  font-weight:300;
+  font:13px/1.5 Arial, sans-serif;
+  color:#444;
+  margin:0;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color:#222;
-  margin:0 0 20px;
+  color:#264868;
+  margin:0 0 10px;
+  font-weight:500;
 }
 
 p, ul, ol, table, pre, dl {
-  margin:0 0 20px;
+  margin:0 0 10px;
 }
 
 h1, h2, h3 {
@@ -21,40 +19,49 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size:28px;
+  font-size:26px;
+  font-weight:normal;
 }
 
 h2 {
-  color:#393939;
+  font-size:18px;
+  font-weight:normal;
 }
 
-h3, h4, h5, h6 {
-  color:#494949;
+
+h3 {
+  font-size:13px;
+}
+
+ul {
+  list-style:none;
+  padding:0 0 0 10px;
+}
+
+sup {
+  position: relative;
+  vertical-align: top;
+  font-size: 50%;  
+  top:2px;
 }
 
 a {
-  color:#39c;
-  font-weight:400;
+  color:#35649C;
   text-decoration:none;
 }
 
-a small {
-  font-size:11px;
-  color:#777;
-  margin-top:-0.6em;
-  display:block;
+a:hover {
+  color:#6CF;
+  text-decoration:underline;
 }
 
-.wrapper {
-  width:860px;
+summary {
+  margin-bottom:6px;
+}
+
+#wrapper {
+  width:960px;
   margin:0 auto;
-}
-
-blockquote {
-  border-left:1px solid #e5e5e5;
-  margin:0;
-  padding:0 0 0 20px;
-  font-style:italic;
 }
 
 code, pre {
@@ -71,71 +78,85 @@ pre {
   overflow-x: auto;
 }
 
-table {
-  width:100%;
-  border-collapse:collapse;
-}
-
-th, td {
-  text-align:left;
-  padding:5px 10px;
-  border-bottom:1px solid #e5e5e5;
-}
-
-dt {
-  color:#444;
-  font-weight:700;
-}
-
-th {
-  color:#444;
-}
-
 img {
   max-width:100%;
 }
 
 header {
-  width:270px;
+  width:960px;
+  height:71px;
+  padding-top:8px;
   float:left;
   position:fixed;
+  
+  background: #aaa;
+  background: -moz-linear-gradient(left, #333 0%, #aaa 90%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#333), color-stop(90%,#aaa));
+  background: -webkit-linear-gradient(left, #333 0%,#aaa 90%);
+  background: -o-linear-gradient(left, #333 0%,#aaa 90%);
+  background: -ms-linear-gradient(left, #333 0%,#aaa 90%);
+  background: linear-gradient(left, #333 0%,#aaa 90%);
+}
+
+#pacbiologo {
+  float:left;
+  margin:10px 16px 0 20px;
 }
 
 header ul {
+  float:left;
   list-style:none;
-  height:40px;
-  
-  padding:0;
-  
-  background: #eee;
-  background: -moz-linear-gradient(top, #f8f8f8 0%, #dddddd 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8f8f8), color-stop(100%,#dddddd));
-  background: -webkit-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
-  background: -o-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
-  background: -ms-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
-  background: linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
-  
-  border-radius:5px;
-  border:1px solid #d2d2d2;
-  box-shadow:inset #fff 0 1px 0, inset rgba(0,0,0,0.03) 0 -1px 0;
-  width:270px;
+  padding:10px;
+  width:500px;
 }
 
 header li {
-  width:89px;
+  margin:22px 10px 0 0;
   float:left;
-  border-right:1px solid #d2d2d2;
+  position:relative;
   height:40px;
 }
 
-header ul a {
-  line-height:1;
+header li a {
   font-size:11px;
-  color:#999;
-  display:block;
+  color:#fff;
   text-align:center;
-  padding-top:6px;
-  height:40px;
+  padding:6px 15px;
+  text-transform:uppercase;
+}
+
+header li a:hover {
+  text-decoration: none;
+  color:#fff;
+
+  -moz-border-radius:2px;
+  -webkit-border-radius:2px;
+  border-radius:2px;
+
+  background: rgb(95,105,165);
+  background: -moz-linear-gradient(top, rgb(127,143,201) 0%, rgb(95,105,165) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(127,143,201)), color-stop(100%, rgb(95,105,165)));
+  background: -webkit-linear-gradient(top, rgb(127,143,201) 0%, rgb(95,105,165) 100%);
+  background: -o-linear-gradient(top, rgb(127,143,201) 0%,rgb(95,105,165) 100%);
+  background: -ms-linear-gradient(top, rgb(127,143,201) 0%, rgb(95,105,165) 100%);
+  background: linear-gradient(top, rgb(127,143,201) 0%, rgb(95,105,165) 100%);
+}
+
+#sitesearch {
+  display:inline-block; 
+  float:right;
+  padding-right:5px;
+}
+
+#sitesearch label {
+  color:white;
+  font-size:10px;
+}
+
+#smrtcommunity {
+  position:absolute;
+  left:0px;
+  top:79px;
 }
 
 strong {
@@ -143,44 +164,61 @@ strong {
   font-weight:700;
 }
 
-header ul li + li {
-  width:88px;
-  border-left:1px solid #fff;
-}
-
-header ul li + li + li {
-  border-right:none;
-  width:89px;
-}
-
-header ul a strong {
-  font-size:14px;
-  display:block;
-  color:#222;
+#contents {
+  margin-top:79px;
+  float:left;
+  clear:both;
+  width:808px;
+  float:left;
+  padding-left:150px;
+  padding-bottom:30px;
+  border-left:1px solid #888;
+  border-right:1px solid #888;
+  border-bottom:1px solid #888;
+  background: #fff;
+  background: -moz-linear-gradient(left, #ccc 0%, #fff 20%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ccc), color-stop(20%,#fff));
+  background: -webkit-linear-gradient(left, #ccc 0%,#fff 20%);
+  background: -o-linear-gradient(left, #ccc 0%,#fff 20%);
+  background: -ms-linear-gradient(left, #ccc 0%,#fff 20%);
+  background: linear-gradient(left, #ccc 0%,#fff 20%);
 }
 
 section {
-  width:500px;
-  float:right;
-  padding-bottom:50px;
+  width:360px;
+  float:left;
+  margin:20px 40px 0px 0;
 }
 
-small {
-  font-size:11px;
-}
-
-hr {
-  border:0;
-  background:#e5e5e5;
-  height:1px;
-  margin:0 0 20px;
+#pb-devnet {
+  clear:both;
+  width:100%;
+  margin:0;
+  padding:20px 0 0px 140px;
+  background-image:url(../images/devnet_home.png);
+  background-repeat:no-repeat;
+  background-size:120px;
+  background-position:0 10px;
 }
 
 footer {
-  width:270px;
+  margin:5px 0;
+  width:960px;
   float:left;
-  position:fixed;
-  bottom:50px;
+  clear:both;
+  position:static;
+  bottom:0px;
+  font-size:11px;
+  background:#fff;
+}
+
+#footer-links {
+  float:left;
+}
+
+footer p {
+  float:right;
+  text-transform:uppercase;
 }
 
 @media print, screen and (max-width: 960px) {
@@ -190,6 +228,12 @@ footer {
     margin:0;
   }
   
+  #smrtcommunity {
+    margin:0;
+    padding-left:0;
+    width:auto;
+  }
+
   header, section, footer {
     float:none;
     position:static;
@@ -241,7 +285,7 @@ footer {
     padding:15px;
   }
   
-  header ul {
+  header {
     display:none;
   }
 }

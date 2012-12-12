@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Devnet by PacificBiosciences</title>
+
+    <title>PacBio&reg; DevNet</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
@@ -13,43 +14,129 @@
     <![endif]-->
   </head>
   <body>
-    <div class="wrapper">
+    <div id="wrapper">
       <header>
-        <h1>Devnet</h1>
-        <p>The DevNet project on github stores the PacBio® DevNet website pages.</p>
-
-        <p class="view"><a href="https://github.com/PacificBiosciences/DevNet">View the Project on GitHub <small>PacificBiosciences/DevNet</small></a></p>
-
-
+        <a id="pacbiologo" href="http://www.pacb.com"><img src="images/pacbio_logo.png" alt="Pacific Biosciences" /></a>
         <ul>
-          <li><a href="https://github.com/PacificBiosciences/DevNet/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/PacificBiosciences/DevNet/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/PacificBiosciences/DevNet">View On <strong>GitHub</strong></a></li>
+          <li><a href="http://www.smrtcommunity.com">Home</a></li>
+          <li><a href="http://www.pacbiosamplenet.com">SampleNet</a></li>
+          <li><a href="http://www.pacbiodevnet.com">DevNet</a></li>
+          <li><a href="http://www.pacbioportal.com">Customers</a></li>
+          <li><a href="http://www.pacb.com/applications/overview">Applications</a></li>
         </ul>
+        <form method="get" action="" id="sitesearch">
+          <label for="searchstring">Search </label><input type="search" id="searchstring" />
+        </form>
+        <img id="smrtcommunity" src="images/smrt_community.png"></img>
       </header>
-      <section>
-        <h3>PacBio® DevNet</h3>
 
-<p>PacBio DevNet is the central resource for life scientists, informatics researchers and independent software vendors to learn about SMRT® sequencing technology, share ideas and code, and communicate with each other.</p>
+      <div id="contents">
 
-<p>Datasets, source code, application programming interfaces, and documentation are shared and distributed throughout the site.</p>
+      <section id="pb-devnet">
+        <h1>PacBio<sup>&reg;</sup> DevNet</h1>
+        <p>The SMRT<sup>&reg;</sup> developers' network. Open software, data, documentation and tips for PacBio sequencing.<br /><em>Now hosted on github.</em></p>
       </section>
+
+      <section id="pb-smrtanalysis">
+        <h2>SMRT<sup>&reg;</sup> Analysis</h2>
+        <p>PacBio's open source software suite for single molecule, <br />real-time sequencing.</p>
+       
+        <details open>
+          <summary>Version 1.3.3</summary>
+ 
+          <h3>Downloads</h3>
+          <ul>
+            <li><a href="">smrtanalysis-1.3.3-centos.tgz</a> <a href="">md5</a></li>
+            <li><a href="">smrtanalysis-1.3.3-ubuntu.tgz</a> <a href="">md5</a></li>
+          </ul>
+
+          <h3>Release Documentation</h3>
+          <ul>
+            <li><a href="">SMRT Analysis v1.3.3 Software Installation</a></li>
+            <li><a href="">SMRT Analysis v1.3.3 Release Notes</a></li>
+            <li><a href="">Using the SMRT Analysis v1.3.3 Amazon Machine Image</a></li>
+          </ul>
+  
+          <h3>User Documentation</h3>
+          <ul>
+            <li><a href="">SMRT Pipe Reference Guide v1.3.3</a></li>
+            <li><a href="">SMRT Portal User Guide v1.3.3</a></li>
+            <li><a href="">SMRT View User Guide v1.3.3</a></li>
+          </ul>
+
+          <h3>Web Service APIs</h3>
+          <ul>
+            <li><a href="">SMRT Portal Web Services v1.3.3</a></li>
+            <li><a href="">PacBio <i>RS</i> Instrument Web Services v1.3.3</a></li>
+          </ul>
+        </details>
+
+        <details>
+          <summary>Previous Versions</summary>
+          <details>
+            <summary>Version 1.3.1</summary>
+          </details>
+        </details>
+      </section>
+
+      <section id="pb-community">
+        <h2>Community</h2>
+        <p>Software, data and documentation for PacBio data.</p>
+
+        <h3><a href="">Discussion forum</a></h3>
+
+        <h3><a href="">Wiki</a></h3>
+        <!--<ul>
+          <li><a href="">FAQ</a></li>
+          <li><a href="">Troubleshooting</a></li>
+          <li><a href="">How To's</a></li>
+        </ul>-->
+
+        <h3><a href="">Datasets</a></h3>
+        <!--<ul>
+          <li><a href="">Base modifications</a></li>
+          <li><a href=""><i>De novo</i> assembly</a></li>
+          <li><a href="">More...</a></li>
+        </ul>-->
+
+        <h3><a href="">Publications</a></h3>
+
+        <h3>Compatible Software</h3>
+        <ul>
+          <li><a href="">Open source</a>: <a href="">HGAp</a>, <a href="">PBJelly</a>, <a href="">Quiver</a><a href="">...</a></li>
+          <li><a href="http://pacb.com/products/partner_products/">Commercial products</a></li>
+        </ul>
+
+        <h3>File Formats and APIs</h3>
+        <ul>
+          <li>HDF5 File APIs: <a href="">Python</a>, <a href="">R</a>, <a href="">Java</a></li>
+          <li>File formats: <a href="">reads (bas.h5)</a>, <a href="">alignments (cmp.h5)</a></li>
+        </ul>
+      </section>
+
+      </div>
+
       <footer>
-        <p>This project is maintained by <a href="https://github.com/PacificBiosciences">PacificBiosciences</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+        <div id="footer-links">
+          <a href="http://twitter.com/#!/pacbio" target="blank"><img src="images/twitter.png"></a>
+          <a href="http://www.youtube.com/PacificBiosciences" target="blank"><img src="images/youtube.png"></a>
+        </div>
+
+        <p><a href="http://www.smrtcommunity.com/TermsOfUse">Terms of Use</a> | <a href="MAILTO:devnet@pacificbiosciences.com">Contact Us</a></p>
       </footer>
     </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> 
+    <script src="javascripts/devnet.js"></script>
     <script src="javascripts/scale.fix.js"></script>
-              <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("UA-13166584-2");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
-
+    <script type="text/javascript">
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+      try {
+        var pageTracker = _gat._getTracker("UA-13166584-2");
+        pageTracker._trackPageview();
+      } catch(err) {}
+    </script>
   </body>
 </html>
