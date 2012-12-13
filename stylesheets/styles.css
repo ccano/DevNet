@@ -209,6 +209,10 @@ section {
   background-position:0 10px;
 }
 
+#pb-search-results {
+  display:none;
+}
+
 footer {
   margin:5px 0;
   width:960px;
