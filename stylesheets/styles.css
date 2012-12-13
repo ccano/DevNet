@@ -11,7 +11,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p, ul, ol, table, pre, dl {
-  margin:0 0 10px;
+  margin:0 0 6px;
 }
 
 h1, h2, h3 {
@@ -31,6 +31,13 @@ h2 {
 
 h3 {
   font-size:13px;
+  font-weight:bolder;
+}
+
+h4 {
+  font-size:12px;
+  font-weight:bolder;
+  margin-bottom:2px;
 }
 
 details, summary {
@@ -43,6 +50,7 @@ img {
 
 ul {
   list-style:none;
+  margin:0 0 10px 0;
   padding:0 0 0 10px;
 }
 
@@ -61,10 +69,6 @@ a {
 a:hover {
   color:#6CF;
   text-decoration:underline;
-}
-
-summary {
-  margin-bottom:6px;
 }
 
 #wrapper {
@@ -97,7 +101,7 @@ header {
   float:left;
   position:fixed;
   
-  background: #aaa;
+  background: #777;
   background: -moz-linear-gradient(left, #333 0%, #aaa 90%);
   background: -webkit-gradient(linear, left top, right top, color-stop(0%,#333), color-stop(90%,#aaa));
   background: -webkit-linear-gradient(left, #333 0%,#aaa 90%);
@@ -166,11 +170,6 @@ header li a:hover {
   top:79px;
 }
 
-strong {
-  color:#222;
-  font-weight:700;
-}
-
 #contents {
   margin-top:79px;
   float:left;
@@ -198,6 +197,15 @@ section {
   margin:20px 40px 0px 0;
 }
 
+.section-head {
+}
+
+.section-body {
+  border:1px solid #ccc;
+  border-radius:6px;
+  padding:10px;
+}
+
 #pb-devnet {
   clear:both;
   width:100%;
@@ -211,6 +219,23 @@ section {
 
 #pb-search-results {
   display:none;
+}
+
+summary {
+  margin-bottom:6px;
+  padding-left:4px;
+  color:#fff;
+  font-size:11px;
+
+  border-radius:4px;
+  
+  background: #777;
+  background: -moz-linear-gradient(left, #333 0%, #aaa 90%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#333), color-stop(90%,#aaa));
+  background: -webkit-linear-gradient(left, #333 0%,#aaa 90%);
+  background: -o-linear-gradient(left, #333 0%,#aaa 90%);
+  background: -ms-linear-gradient(left, #333 0%,#aaa 90%);
+  background: linear-gradient(left, #333 0%,#aaa 90%);
 }
 
 footer {
