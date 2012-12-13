@@ -153,12 +153,11 @@ header li a:hover {
 #sitesearch {
   display:inline-block; 
   float:right;
-  padding-right:5px;
+  padding-right:15px;
 }
 
-#sitesearch label {
-  color:white;
-  font-size:10px;
+#sitesearch input {
+  font-size:11px;
 }
 
 #smrtcommunity {
