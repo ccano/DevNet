@@ -177,6 +177,7 @@ strong {
   float:left;
   clear:both;
   width:808px;
+  min-height:340px;
   float:left;
   padding-left:150px;
   padding-bottom:10px;
