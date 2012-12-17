@@ -14,10 +14,6 @@ p, ul, ol, table, pre, dl {
   margin:0 0 6px;
 }
 
-h1, h2, h3 {
-  line-height:1.1;
-}
-
 h1 {
   font-size:26px;
   font-weight:normal;
@@ -74,24 +70,6 @@ a:hover {
 #wrapper {
   width:960px;
   margin:0 auto;
-}
-
-code, pre {
-  font-family:Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal;
-  color:#333;
-  font-size:12px;
-}
-
-pre {
-  padding:8px 15px;
-  background: #f8f8f8;  
-  border-radius:5px;
-  border:1px solid #e5e5e5;
-  overflow-x: auto;
-}
-
-img {
-  max-width:100%;
 }
 
 header {
@@ -201,7 +179,7 @@ section {
 }
 
 .section-body {
-  border:1px solid #ccc;
+  border:1px solid #aaa;
   border-radius:6px;
   padding:10px;
 }
@@ -217,11 +195,24 @@ section {
   background-position:0 10px;
 }
 
-#pb-search-results {
+#pb-search-results, #pb-dialog {
   display:none;
 }
 
+#pb-signup a {
+  float:left;
+}
+
+#pb-signup input[type='button'] {
+  float:right;
+}
+
+#hyLiteDlg {
+  border-radius:6px;
+}
+
 summary {
+  width:120px;
   margin-bottom:6px;
   padding-left:4px;
   color:#fff;
@@ -229,13 +220,17 @@ summary {
 
   border-radius:4px;
   
-  background: #777;
-  background: -moz-linear-gradient(left, #333 0%, #aaa 90%);
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#333), color-stop(90%,#aaa));
-  background: -webkit-linear-gradient(left, #333 0%,#aaa 90%);
-  background: -o-linear-gradient(left, #333 0%,#aaa 90%);
-  background: -ms-linear-gradient(left, #333 0%,#aaa 90%);
-  background: linear-gradient(left, #333 0%,#aaa 90%);
+  background: #555;
+  background: -moz-linear-gradient(left, #333 0%, #888 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#333), color-stop(100%,#888));
+  background: -webkit-linear-gradient(left, #333 0%,#888 100%);
+  background: -o-linear-gradient(left, #333 0%,#888 100%);
+  background: -ms-linear-gradient(left, #333 0%,#888 100%);
+  background: linear-gradient(left, #333 0%,#888 100%);
+}
+
+details details {
+  margin-left:10px;
 }
 
 footer {
