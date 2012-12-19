@@ -78,7 +78,7 @@ header {
   height:71px;
   padding-top:8px;
   float:left;
-  position:fixed;
+  position:relative;
   
   background: #777;
   background: -moz-linear-gradient(left, #333 0%, #aaa 90%);
@@ -150,16 +150,17 @@ header li a:hover {
 }
 
 #contents {
-  margin-top:79px;
   clear:both;
   float:left;
   width:898px;
   min-height:340px;
   padding-left:60px;
-  padding-bottom:40px;
+  padding-bottom:20px;
+
   border-left:1px solid #888;
   border-right:1px solid #888;
   border-bottom:1px solid #888;
+
   background: #fff;
   background: -moz-linear-gradient(left, #ccc 0%, #fff 20%);
   background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ccc), color-stop(20%,#fff));
@@ -257,15 +258,13 @@ details details {
 }
 
 footer {
-  margin:5px 0 0 0;
+  margin:0;
   width:960px;
   float:left;
   clear:both;
-  position:fixed;
   bottom:0px;
   font-size:11px;
   background:#fff;
-  border-top:1px solid #888;
 }
 
 #footer-links {
@@ -278,78 +277,13 @@ footer p {
 }
 
 @media print, screen and (max-width: 960px) {
-  
-  div.wrapper {
-    width:auto;
-    margin:0;
-  }
-  
-  #smrtcommunity {
-    margin:0;
-    padding-left:0;
-    width:auto;
-  }
-
-  header, section, footer {
-    float:none;
-    position:static;
-    width:auto;
-  }
-  
-  header {
-    padding-right:320px;
-  }
-  
-  section {
-    border:1px solid #e5e5e5;
-    border-width:1px 0;
-    padding:20px 0;
-    margin:0 0 20px;
-  }
-  
-  header a small {
-    display:inline;
-  }
-  
-  header ul {
-    position:absolute;
-    right:50px;
-    top:52px;
-  }
 }
 
 @media print, screen and (max-width: 720px) {
-  body {
-    word-wrap:break-word;
-  }
-  
-  header {
-    padding:0;
-  }
-  
-  header ul, header p.view {
-    position:static;
-  }
-  
-  pre, code {
-    word-wrap:normal;
-  }
 }
 
 @media print, screen and (max-width: 480px) {
-  body {
-    padding:15px;
-  }
-  
-  header {
-    display:none;
-  }
 }
 
 @media print {
-  body {
-    padding:0.4in;
-    font-size:12pt;
-    color:#444;
-  }
 }

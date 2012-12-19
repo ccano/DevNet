@@ -16,14 +16,16 @@
   <body>
     <div id="wrapper">
       <header>
-        <a id="pacbiologo" href="http://pacb.com"><img src="images/pacbio_logo.png" alt="Pacific Biosciences" /></a>
-        <ul>
-          <li><a href="http://www.smrtcommunity.com">Home</a></li>
-          <li><a href="http://www.pacbiosamplenet.com">SampleNet</a></li>
-          <li><a href="http://www.pacbiodevnet.com">DevNet</a></li>
-          <li><a href="http://www.pacbioportal.com">Customers</a></li>
-          <li><a href="http://pacb.com/applications/overview">Applications</a></li>
-        </ul>
+        <nav>
+          <a id="pacbiologo" href="http://pacb.com"><img src="images/pacbio_logo.png" alt="Pacific Biosciences" /></a>
+          <ul>
+            <li><a href="http://www.smrtcommunity.com">Home</a></li>
+            <li><a href="http://www.pacbiosamplenet.com">SampleNet</a></li>
+            <li><a href="http://www.pacbiodevnet.com">DevNet</a></li>
+            <li><a href="http://www.pacbioportal.com">Customers</a></li>
+            <li><a href="http://pacb.com/applications/overview">Applications</a></li>
+          </ul>
+        </nav>
         <form action="index.html" id="sitesearch">
           <input name="cx" type="hidden" value="012727368632080236692:zarsmzfor8i" />
           <input name="cof" type="hidden" value="FORID:9" />
@@ -186,44 +188,6 @@
     <script src="javascripts/jquery.cookie.js"></script> 
     <script src="javascripts/scale.fix.js"></script>
     <script src="javascripts/devnet.js"></script>
-
-    <!-- DevNet page tweaks -->
-    <script type="text/javascript">
-      $(document).ready(function() {
-        // support details+summary in older browsers
-        try { 
-          $('details').details(); 
-        } catch(err) {}
-
-        // after site search, replace contents with search results
-        $('iframe').livequery(function() {
-          $('section,#adBlock').hide();
-          $('#contents').css('background', '#f1f1f1');
-          $('#pb-search-results').show();
-        });
-
-        // Offer to inform users about new releases
-        $('a.register').click(function() {
-          if(!$.cookie('devnetreg')) {
-            $.liteDialog({ modal: true, html: $('#pb-dialog').html() });
-            $('#pb-signup a').attr('href', $(this).attr('href'));
-          }
-
-          // Remember user
-          $('#pb-signup input').click(function() {
-            //$.cookie('devnetreg', 'true', { expires: (365*10)}); 
-            window.location = $('#pb-signup a').click();
-          });
-
-          // Close dialog
-          $('#pb-signup a').click(function() { 
-            $.liteDialog('hide');
-          });
-
-          return false;
-        });
-      });
-    </script>
 
     <!-- Google Site Search -->
     <script type="text/javascript">
