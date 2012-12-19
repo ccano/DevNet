@@ -69,6 +69,7 @@ a:hover {
 
 #wrapper {
   width:960px;
+  min-width:960px;
   margin:0 auto;
 }
 
@@ -150,13 +151,12 @@ header li a:hover {
 
 #contents {
   margin-top:79px;
-  float:left;
   clear:both;
-  width:808px;
-  min-height:340px;
   float:left;
-  padding-left:150px;
-  padding-bottom:10px;
+  width:898px;
+  min-height:340px;
+  padding-left:60px;
+  padding-bottom:40px;
   border-left:1px solid #888;
   border-right:1px solid #888;
   border-bottom:1px solid #888;
@@ -170,9 +170,9 @@ header li a:hover {
 }
 
 section {
-  width:360px;
+  width:380px;
   float:left;
-  margin:20px 40px 0px 0;
+  margin:20px 0 0 40px;
 }
 
 .section-head {
@@ -186,13 +186,36 @@ section {
 
 #pb-devnet {
   clear:both;
-  width:100%;
+  width:520px;
   margin:0;
-  padding:20px 0 0px 140px;
+  padding:20px 0 0px 320px;
   background-image:url(../images/devnet_home.png);
   background-repeat:no-repeat;
-  background-size:120px;
-  background-position:0 10px;
+  background-position:0px 30px;
+}
+
+#pb-news {
+  padding:10px;
+  margin-top:20px;
+  font-size:11px;
+  background:#eee;
+  border-radius:6px;
+}
+
+#pb-news h2 {
+  color:#a44;
+  font-size:13px;
+  font-weight:bold;
+  margin-bottom:0;
+}
+
+#pb-news a {
+  color:#a44;
+  font-weight:bold;
+}
+
+#pb-releases {
+  clear:both;
 }
 
 #pb-search-results, #pb-dialog {
@@ -234,14 +257,15 @@ details details {
 }
 
 footer {
-  margin:5px 0;
+  margin:5px 0 0 0;
   width:960px;
   float:left;
   clear:both;
-  position:static;
+  position:fixed;
   bottom:0px;
   font-size:11px;
   background:#fff;
+  border-top:1px solid #888;
 }
 
 #footer-links {
