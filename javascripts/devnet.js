@@ -2,9 +2,7 @@
       
 $(document).ready(function() {
     // support details+summary in older browsers
-    try { 
-        $('details').details(); 
-    } catch(err) {}
+    $('details').details(); 
 
     // after site search, replace contents with search results
     $('iframe').livequery(function() {
