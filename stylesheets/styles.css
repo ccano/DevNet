@@ -219,6 +219,46 @@ section {
   clear:both;
 }
 
+#pb-releases a[href$='.tgz'], #pb-releases a[href$='.zip'], #pb-releases a[href$='.gz'], #pb-releases a[href$='.bz'] { 
+  padding-left:20px;
+  background:url(../images/zip.gif) no-repeat;
+}
+
+#pb-releases a[href$='.doc'], #pb-releases a[href$='.docx'] { 
+  padding-left:20px;
+  background:url(../images/doc.gif) no-repeat; 
+}
+
+#pb-releases a[href$='.xls'], #pb-releases a[href$='.xlsx'] { 
+  padding-left:20px;
+  background:url(../images/xls.gif) no-repeat; 
+}
+
+#pb-releases a[href$='.ppt'], #pb-releases a[href$='.pptx'] { 
+  padding-left:20px;
+  background:url(../images/ppt.gif) no-repeat; 
+}
+
+#pb-releases a[href$='.pdf'] {
+  padding-left:20px;
+  background:url(../images/pdf.png) no-repeat; 
+}
+
+#pb-releases a[href$='.txt'] {
+  padding-left:20px;
+  background:url(../images/txt.gif) no-repeat; 
+}
+
+#pb-releases a[href$='.html'] {
+  padding-left:20px;
+  background:url(../images/html.jpg) no-repeat; 
+}
+
+#pb-releases a[href$='.mov'], #pb-releases a[href$='.mp4'] {
+  padding-left:20px;
+  background:url(../images/video.png) no-repeat; 
+}
+
 #pb-search-results, #pb-dialog {
   display:none;
 }
