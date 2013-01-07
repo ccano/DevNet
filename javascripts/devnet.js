@@ -1,10 +1,9 @@
 // DevNet tweaks
-      
 $(document).ready(function() {
-    // support details+summary in older browsers
+    // Support details+summary in older browsers
     $('details').details(); 
 
-    // after site search, replace contents with search results
+    // After site search, replace contents with search results
     $('iframe').livequery(function() {
         $('section').hide();
         $('#contents').css('background', '#f1f1f1');
@@ -13,20 +12,55 @@ $(document).ready(function() {
 
     // Offer to inform users about new releases
     $('a.register').click(function() {
-        if(!$.cookie('devnetreg')) {
-            $.liteDialog({ modal: true, html: $('#pb-dialog').html() });
-            $('#pb-signup a').attr('href', $(this).attr('href'));
+        // Already registered
+        if($.cookie('devnetreg')) {
+          return true;
         }
 
-        // Remember user
-        $('#pb-signup input').click(function() {
-            //$.cookie('devnetreg', 'true', { expires: (365*10)}); 
-            window.location = $('#pb-signup a').click();
+        // Reset layout
+        $('.pb-waiting,.pb-confirm,.pb-error').hide();
+        $('.pb-regform').show();
+
+        $.liteDialog({ modal: true, html: $('#pb-dialog').html() });
+        $('.pb-regform a').attr('href', $(this).attr('href'));
+
+        // Submit the form
+        $('.pb-regform').submit(function() {
+          $('.pb-regform').hide();
+          $('.pb-waiting').show();
+          $.ajax({
+            url: $('.pb-regform').attr('action'), 
+            type: 'POST', 
+            data: $('#hyLiteDlg .pb-regform').serialize() + '&Register=SUBMIT', 
+            success: function(){  
+              $('.pb-waiting').hide();
+              $('.pb-confirm').show();
+              //$.cookie('devnetreg', info.email, { expires: (365*10)}); 
+            },
+            error: function(err){ 
+              $('.pb-waiting').hide();
+              $('.pb-error').show();
+            }
+          });
+          return false;
         });
 
-        // Close dialog
-        $('#pb-signup a').click(function() { 
+        // Continue without signing up
+        $('.pb-signup a').click(function() { 
             $.liteDialog('hide');
+        });
+
+        // Cancel on ESC key
+        $(document).keyup(function(e) {
+          if(e.keyCode === 27) {
+            $.liteDialog('hide');
+          }
+        });
+
+        // Continue to link
+        $('.pb-confirm input, .pb-error input').click(function() {
+            $.liteDialog('hide');
+            window.location = $('.pb-regform a').attr('href');
         });
 
         return false;

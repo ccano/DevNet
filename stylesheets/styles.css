@@ -44,6 +44,18 @@ img {
   border:none;
 }
 
+fieldset {
+  border:none;
+  padding:none;
+  margin:none;
+  -webkit-margin-start:0;
+  -webkit-margin-end:0;
+  -webkit-padding-before:0;
+  -webkit-padding-start:0;
+  -webkit-padding-end:0;
+  -webkit-padding-after:0;
+}
+
 ul {
   list-style:none;
   margin:0 0 10px 0;
@@ -75,8 +87,8 @@ a:hover {
 
 header {
   width:960px;
-  height:71px;
-  padding-top:8px;
+  height:71px; 
+  padding-top:8px; 
   float:left;
   position:relative;
   
@@ -263,12 +275,42 @@ section {
   display:none;
 }
 
-#pb-signup a {
-  float:left;
+.pb-signup {
+  padding:0 10px;
 }
 
-#pb-signup input[type='button'] {
+.pb-regform a {
+  float:left;
+  font-size:11px;
+}
+
+.pb-regform input[type='submit'], .pb-confirm input, .pb-error input {
   float:right;
+}
+
+.pb-regform ul {
+  padding:10px;
+  margin-bottom:10px;
+  background:#eee;
+  border-radius:6px;
+}
+
+.pb-regform label {
+  display:inline-block;
+  width:80px;
+  text-align:right;
+}
+
+.pb-regform label:after {
+  content:'*';
+}
+
+.pb-regform input[type="text"], .pb-regform input[type="email"] {
+  width:150px;
+}
+
+.pb-waiting, .pb-confirm, .pb-error {
+  display:none;
 }
 
 #hyLiteDlg {

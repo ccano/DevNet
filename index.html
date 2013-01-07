@@ -43,12 +43,51 @@
       </section>
 
       <div id="pb-dialog">
-        <div id="pb-signup">
-          <h2>Sign up for DevNet Notifications</h2>
-          <p>Sign up to be notified about new SMRT<sup>&reg;</sup> Analysis releases.</p>
-          <div id="pb-regform"></div>
-          <a href="">Continue to download</a>
-          <input type="button" value="Sign Up">
+        <div class="pb-signup">
+          <form class="pb-regform" action="http://programs.pacificbiosciences.com/l/1652/2010-06-25/HH1Z1" method="POST">
+            <h2>Sign Up for DevNet Notifications</h2>
+            <input name="accept" type="hidden" value="accept" />
+            <input name="group1" type="hidden" value="academic" />
+            <input name="country" type="hidden" value="Earth" />
+            <fieldset>
+              <legend>Sign up to be notified about new SMRT<sup>&reg;</sup> Analysis and DevNet software content.</legend>
+              <ul>
+                <li>
+                  <label for="firstName">First Name</label>
+                  <input id="firstName" name="firstName" type="text" required />
+                </li>
+                <li>
+                  <label for="lastName">Last Name</label>
+                  <input id="lastName" name="lastName" type="text" required />
+                </li>
+                <li>
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" required />
+                </li>
+                <li>
+                  <label for="company">Organization</label>
+                  <input id="company" name="company" type="text" required />
+                </li>
+              </ul>
+            </fieldset>
+            <a href="">No thanks, continue to download</a>
+            <input type="submit" class="submit" name="Register" value="Submit">
+          </form>
+        </div>
+        <div class="pb-waiting">
+          <h2>Signing Up</h2>
+          <p>Please wait...</p>
+        </div>
+        <div class="pb-confirm">
+          <h2>Thank You for Signing Up!</h2>
+          <p>You will be notified about upcoming SMRT Analysis releases and software. Please continue to your download.</p>
+          <input type="button" value="Download" />
+        </div>
+        <div class="pb-error">
+          <h2>Sorry for the Inconvenience</h2>
+          <p>Sorry! Your signup information could not be processed at this time. Don't worry, though. You can click on the link again to signup later.</p>
+          <p>In the meantime, please continue to your download.</p>
+          <input type="button" value="Download" />
         </div>
       </div>
 
@@ -165,8 +204,8 @@
 
           <h3>File Formats and APIs</h3>
           <ul>
-            <li>File formats: <a href="">reads (bas.h5)</a>, <a href="">alignments (cmp.h5)</a></li>
-            <li>File APIs: <a href="">Python</a>, <a href="">R</a>, <a href="">Java</a></li>
+            <li>File formats: <a href="http://pacificbiosciences.com/devnet/files/software/primary-analysis/1.2.2/doc/Base, Pulse, and Trace File Reference Guide.pdf">base file</a>, <a href="http://pacificbiosciences.com/devnet/files/software/smrtpipe/1.2.1/doc/cmp.h5 Reference Guide.pdf">alignment</a>, <a href="http://pacificbiosciences.com/devnet/files/software/primary-analysis/1.2.1/doc/Metadata Output Guide.pdf">metadata</a>, <a href="http://pacificbiosciences.com/devnet/files/software/primary-analysis/1.2.1/doc/Statistics Output Guide.pdf">statistics</a>, <a href="http://pacificbiosciences.com/devnet/files/software/instrument-web-services/1.2.1/doc/Run Definition File Format.pdf">run definition</a>, <a href="http://pacificbiosciences.com/devnet/files/consumables/barcodes/1.2.1/Consumables Barcode Layout Guide.pdf">barcodes</a></li>
+            <li>File APIs: <a href="https://github.com/PacificBiosciences/pbh5tools">Python</a>, <a href="https://github.com/PacificBiosciences/R-pbh5">R</a>, <a href="http://pacificbiosciences.com/devnet/files/software/hdf-java-api/1.2.2.1/com.pacbio.hdf5api-1.2.2.1.zip">Java</a> (<a href="http://pacificbiosciences.com/devnet/files/software/hdf-java-api/1.2.2.1/HDF5 Java API User Guide.pdf">user guide</a>)</li>
           </ul>
         </div>
       </section>
@@ -174,8 +213,8 @@
 
       <footer>
         <div id="footer-links">
-          <a href="http://twitter.com/#!/pacbio"><img src="images/twitter.png"></a>
-          <a href="http://www.youtube.com/PacificBiosciences"><img src="images/youtube.png"></a>
+          <a href="http://twitter.com/#!/pacbio"><img src="images/twitter.png" alt="Follow us on Twitter" /></a>
+          <a href="http://www.youtube.com/PacificBiosciences"><img src="images/youtube.png" alt="Watch PacBio videos on YouTube" /></a>
         </div>
 
         <p><a href="Terms Of Use.rst">Terms of Use</a> | <a href="MAILTO:devnet@pacificbiosciences.com">Contact Us</a></p>
