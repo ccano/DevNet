@@ -167,7 +167,7 @@ header li a:hover {
   width:898px;
   min-height:340px;
   padding-left:60px;
-  padding-bottom:20px;
+  padding-bottom:50px;
 
   border-left:1px solid #888;
   border-right:1px solid #888;
@@ -231,44 +231,53 @@ section {
   clear:both;
 }
 
-#pb-releases a[href$='.tgz'], #pb-releases a[href$='.zip'], #pb-releases a[href$='.gz'], #pb-releases a[href$='.bz'] { 
+.legalese {
+  font-style:italic;
+}
+
+#pb-releases details a[href$='.tgz'], #pb-releases details a[href$='.zip'], #pb-releases details a[href$='.gz'], #pb-releases details a[href$='.bz'] { 
   padding-left:20px;
   background:url(../images/zip.gif) no-repeat;
 }
 
-#pb-releases a[href$='.doc'], #pb-releases a[href$='.docx'] { 
+#pb-releases details a[href$='.doc'], #pb-releases details a[href$='.docx'] { 
   padding-left:20px;
   background:url(../images/doc.gif) no-repeat; 
 }
 
-#pb-releases a[href$='.xls'], #pb-releases a[href$='.xlsx'] { 
+#pb-releases details a[href$='.xls'], #pb-releases details a[href$='.xlsx'] { 
   padding-left:20px;
   background:url(../images/xls.gif) no-repeat; 
 }
 
-#pb-releases a[href$='.ppt'], #pb-releases a[href$='.pptx'] { 
+#pb-releases details a[href$='.ppt'], #pb-releases details a[href$='.pptx'] { 
   padding-left:20px;
   background:url(../images/ppt.gif) no-repeat; 
 }
 
-#pb-releases a[href$='.pdf'] {
+#pb-releases details a[href$='.pdf'] {
   padding-left:20px;
   background:url(../images/pdf.png) no-repeat; 
 }
 
-#pb-releases a[href$='.txt'] {
+#pb-releases details a[href$='.txt'] {
   padding-left:20px;
   background:url(../images/txt.gif) no-repeat; 
 }
 
-#pb-releases a[href$='.html'] {
+#pb-releases details a[href$='.html'] {
   padding-left:20px;
   background:url(../images/html.jpg) no-repeat; 
 }
 
-#pb-releases a[href$='.mov'], #pb-releases a[href$='.mp4'] {
+#pb-releases details a[href$='.mov'], #pb-releases details a[href$='.mp4'] {
   padding-left:20px;
   background:url(../images/video.png) no-repeat; 
+}
+
+#pb-community h3 {
+  margin-top:5px;
+  margin-bottom:0;
 }
 
 #pb-search-results, #pb-dialog {
@@ -340,17 +349,23 @@ details details {
 }
 
 footer {
-  margin:0;
+  margin: 5px 0 0;
   width:960px;
   float:left;
+  position:fixed;
   clear:both;
   bottom:0px;
   font-size:11px;
   background:#fff;
+  border-top:1px solid #888;
 }
 
 #footer-links {
   float:left;
+}
+
+#footer-links a:last-child {
+  margin-left:35px;
 }
 
 footer p {
