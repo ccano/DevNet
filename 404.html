@@ -4,21 +4,30 @@
 </head>
 <body>
   <script type="text/javascript">
-    var path = window.location.pathname, 
-      redir = 'http://pacificbiosciences.github.com/DevNet',
-      map = {
-        '/SMRT-Analysis/DevNet': 'http://pacificbiosciences.github.com/DevNet/',
-        '/SMRT-Analysis/Software/SMRT-Analysis': 'http://pacificbiosciences.github.com/DevNet/',
+    var map = {
         '/answers/listQuestion.apexp?c=09a700000008f5SAAQ&cat=02n70000000Ldav': 'https://github.com/PacificBiosciences/SMRT-Analysis/issues',
-        '/Share/Datasets': 'https://github.com/PacificBiosciences/DevNet/wiki/Datasets',
-        '/Share/Code/List': 'https://github.com/PacificBiosciences/DevNet/wiki/Compatible-Software',
-        '/SMRT-Analysis/Tools': 'http://pacificbiosciences.github.com/DevNet/',
+        '/download/overview': 'http://pacificbiosciences.github.com/DevNet/',
+        '/hgap': 'https://github.com/PacificBiosciences/DevNet/wiki/Hierarchical-Genome-Assembly-Process-(HGAP)',
+        '/home': 'http://pacificbiosciences.github.com/DevNet/
+        '/quiver': 'https://github.com/PacificBiosciences/GenomicConsensus',
+        '/share/datasets/ecolioutbreak': 'https://github.com/PacificBiosciences/DevNet/wiki/E%20coli%20O104%20H4%20Outbreak%20Assembly', 
+        '/smrtanalysis': 'http://pacificbiosciences.github.com/DevNet/',
+        '/smrtanalysis/software/blasr': 'http://pacificbiosciences.github.com/DevNet/',
+        '/smrtanalysis/software/smrtpipe': 'http://pacificbiosciences.github.com/DevNet/',
+        '/CodeShare/Project/PacBioFx': 'https://github.com/PacificBiosciences',
+        '/ConversionTools': 'http://pacificbiosciences.github.com/DevNet/',
         '/Learn/Documentation/File-Formats': 'http://pacificbiosciences.github.com/DevNet/',
         '/Learn/Videos': 'http://pacb.com/aboutus/video-gallery/index.html',
         '/Learn/How-To': "https://github.com/PacificBiosciences/DevNet/wiki/How-To's-and-Examples",
-        '/SMRT-Analysis/Software/SMRT-Pipe': 'http://pacificbiosciences.github.com/DevNet/',
-        '/SMRT-Analysis/Software/SMRT-Portal': 'http://pacificbiosciences.github.com/DevNet/',
-        '/SMRT-Analysis/Software/SMRT-View': 'http://pacificbiosciences.github.com/DevNet/',
+        '/Learn/How-To/Find-Barcodes-in-CCS': 'https://github.com/PacificBiosciences/DevNet/wiki/Find%20Barcodes%20in%20CCS%20Reads',
+        '/Learn/How-To/DNA-Modification': 'https://github.com/PacificBiosciences/DevNet/wiki/Detect%20Base%20Modifications%20with%20SMRT%20Sequencing',
+        '/Learn/How-To/Write-a-SMRT-Pipe-Module': 'https://github.com/PacificBiosciences/DevNet/wiki/Write%20a%20Custom%20SMRT%20Pipe%20module',
+        '/Learn/How-To/E-coli-O104-Assembly': 'https://github.com/PacificBiosciences/DevNet/wiki/De%20Novo%20Assembly%20Methods',
+        '/Learn/How-To/BCR-ABL': 'https://github.com/PacificBiosciences/DevNet/wiki/BCR-ABL%20Fusion%20Protein'
+        '/Partner_Product': 'http://pacb.com/community/partner_program/current_partners',
+        '/Share/Code/List': 'https://github.com/PacificBiosciences/DevNet/wiki/Compatible-Software',
+        '/Share/Datasets': 'https://github.com/PacificBiosciences/DevNet/wiki/Datasets',
+        '/Share/Datasets/Base-Mods': 'https://github.com/PacificBiosciences/DevNet/wiki/Base-Modification-Datasets-and-Software',
         '/Share/Datasets/CRF-for-Base-Modification': 'https://github.com/PacificBiosciences/DevNet/wiki/CRF%20for%20Base%20Modification',
         '/Share/Datasets/E-coli-K12-Base-Mods': 'https://github.com/PacificBiosciences/DevNet/wiki/E%20coli%20K12%20MG1655%20Methylome',
         '/Share/Datasets/FLT3': 'https://github.com/PacificBiosciences/DevNet/wiki/FLT3%20Internal%20Tandem%20Duplication',
@@ -26,16 +35,19 @@
         '/Share/Datasets/E-coli-K12-Resequencing': 'https://github.com/PacificBiosciences/DevNet/wiki/E%20coli%20K12%20MG1655%20Resequencing',
         '/Share/Datasets/HapMap-Broad': 'https://github.com/PacificBiosciences/DevNet/wiki/Human%20HapMap%20Data',
         '/Share/Datasets/EGFR-MET': 'https://github.com/PacificBiosciences/DevNet/wiki/Human%20EGFR-MET%20Variants',
+        '/Share/Datasets/NAR_six_methylomes': 'https://github.com/PacificBiosciences/DevNet/wiki/The-Methylomes-of-Six-Bacteria',
         '/Share/Datasets/Parrot-Assemblathon': 'https://github.com/PacificBiosciences/DevNet/wiki/Parrot%20Genome%20for%20the%20Assemblathon%202',
         '/Share/Datasets/E-coli-Outbreak': 'https://github.com/PacificBiosciences/DevNet/wiki/E%20coli%20O104%20H4%20Outbreak%20Assembly',
         '/Share/Datasets/V-cholerae-Haiti': 'https://github.com/PacificBiosciences/DevNet/wiki/Haitian%20V%20cholerae%20Assembly',
         '/Share/Datasets/R-sphaeroides-Resequencing': 'https://github.com/PacificBiosciences/DevNet/wiki/R.%20sphaeroides',
-        '/Learn/How-To/Find-Barcodes-in-CCS': 'https://github.com/PacificBiosciences/DevNet/wiki/Find%20Barcodes%20in%20CCS%20Reads',
-        '/Learn/How-To/DNA-Modification': 'https://github.com/PacificBiosciences/DevNet/wiki/Detect%20Base%20Modifications%20with%20SMRT%20Sequencing',
-        '/Learn/How-To/Write-a-SMRT-Pipe-Module': 'https://github.com/PacificBiosciences/DevNet/wiki/Write%20a%20Custom%20SMRT%20Pipe%20module',
-        '/Learn/How-To/E-coli-O104-Assembly': 'https://github.com/PacificBiosciences/DevNet/wiki/De%20Novo%20Assembly%20Methods',
-        '/Learn/How-To/BCR-ABL': 'https://github.com/PacificBiosciences/DevNet/wiki/BCR-ABL%20Fusion%20Protein'
+        '/SMRT-Analysis/DevNet': 'http://pacificbiosciences.github.com/DevNet/',
+        '/SMRT-Analysis/Software/SMRT-Analysis': 'http://pacificbiosciences.github.com/DevNet/',
+        '/SMRT-Analysis/Software/SMRT-Pipe': 'http://pacificbiosciences.github.com/DevNet/',
+        '/SMRT-Analysis/Software/SMRT-Portal': 'http://pacificbiosciences.github.com/DevNet/',
+        '/SMRT-Analysis/Software/SMRT-View': 'http://pacificbiosciences.github.com/DevNet/',
+        '/SMRT-Analysis/Tools': 'http://pacificbiosciences.github.com/DevNet/',
+        '/Tech_Lib': 'http://pacificbiosciences.github.com/DevNet/'
     };
- 
+    window.location.href = map[window.location.pathname] || 'http://pacificbiosciences.github.com/DevNet';
   </script>
 </body>
