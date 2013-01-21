@@ -16,6 +16,7 @@ $(document).ready(function() {
         if($.cookie('devnetreg')) {
           return true;
         }
+        //alert($.cookie('devnetreg'));
 
         // Reset layout
         $('.pb-waiting,.pb-confirm,.pb-error').hide();
@@ -36,13 +37,15 @@ $(document).ready(function() {
             success: function(){  
               $('.pb-waiting').hide();
               $('.pb-confirm').show();
-              $.cookie('devnetreg', $('#email').val(), { expires: (365*10)}); 
+              $.cookie('devnetreg', $("#hyLiteDlg input[name='email']").val(), { expires: (365*10)}); 
+              //alert($.cookie('devnetreg'));
             },
             error: function(err){ 
               $('.pb-waiting').hide();
               $('.pb-confirm').show(); // submission works, jsonp bonks; suppress
               //$('.pb-error').show();
-              $.cookie('devnetreg', $('#email').val(), { expires: (365*10)}); 
+              $.cookie('devnetreg', $("#hyLiteDlg input[name='email']").val(), { expires: (365*10)}); 
+              //alert($.cookie('devnetreg'));
             }
           });
           return false;
