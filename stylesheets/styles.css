@@ -344,6 +344,11 @@ summary {
   background: linear-gradient(left, #333 0%,#888 100%);
 }
 
+summary:hover {
+  cursor:pointer;
+  color:#6CF;
+}
+
 details details {
   margin-left:10px;
 }
